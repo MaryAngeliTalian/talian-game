@@ -1,37 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Whack A Meow</title>
-  <link rel="stylesheet" href="index.css">
-  <link rel="icon" href="logoOne.png">
-</head>
+  <head>
+    <title>Whack A Meow</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="icon" href="logoOne.png" />
+  </head>
 
-<body>
-  <div class="logo">
-    <img src="logoOne.png" alt="Whack A Meow" class="game-logo">
-  </div>
+  <body>
+    <div class="logo">
+      <img src="logoOne.png" alt="Whack A Meow" class="game-logo" />
+    </div>
 
-  <div class="buttons">
-    <button class="play-button"><a href="/main">CLASSIC</a></button>
-    <button class="mode-button"><a href="/mode">TYPING GAME - Talian</a></button>
-  </div>
+    <div class="buttons">
+      <button class="play-button"><a href="/main.html">CLASSIC</a></button>
+      <button class="mode-button">
+        <a href="/mode.html">TYPING GAME - Talian</a>
+      </button>
+    </div>
     <a href="main.html"></a>
     <a href="mode.html"></a>
 
-  <!-- Leaderboard -->
-  <div id="leaderboardScreen" class="leaderboard-screen">
-    <h2>Leaderboard</h2>
-    <ol id="leaderboardList"></ol>
-    <button onclick="closeLeaderboard()" class="play-button">Close</button>
-  </div>
+    <!-- Leaderboard -->
+    <div id="leaderboardScreen" class="leaderboard-screen">
+      <h2>Leaderboard</h2>
+      <ol id="leaderboardList"></ol>
+      <button onclick="closeLeaderboard()" class="play-button">Close</button>
+    </div>
 
-  <button onclick="showLeaderboard()" class="play-button" style="margin-top: 20px;">View Leaderboard</button>
+    <button
+      onclick="showLeaderboard()"
+      class="play-button"
+      style="margin-top: 20px"
+    >
+      View Leaderboard
+    </button>
 
-  <!-- Firebase SDK -->
-  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
 
-  <!-- Your external leaderboard logic -->
-  <script src="leaderboard.js"></script>
-</body>
+    <!-- Your external leaderboard logic -->
+    <script src="leaderboard.js"></script>
+  </body>
 </html>
