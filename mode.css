@@ -1,0 +1,311 @@
+@font-face {
+    font-family: "Kodchasan" ;
+    src: url("Kodchasan-Bold.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Kodchasan";
+    background-image: url("bg 4.png");
+    background-size: cover;
+    color: #6A4FB3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin-bottom: 50px;
+}
+
+/* Game Container */
+#gameContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Game Header */
+.header {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.game-logo {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+}
+
+/* Game Info */
+.game-info {
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+    margin: 10px 0 15px;
+    background-color: #6b5bb1;
+    padding: 10px 20px;
+    border-radius: 15px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Typed Display */
+.typed-display {
+    background-color: #6b5bb1;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-size: 20px;
+    margin-bottom: 15px;
+    width: 600px;
+    text-align: center;
+}
+
+#typedDisplay {
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.2); /* Background color behind text */
+    padding: 2px 8px;
+    border-radius: 5px;
+}
+
+/* Game Controls */
+.game-controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 600px;
+    margin-bottom: 20px;
+}
+
+.control-btn {
+    padding: 10px 20px;
+    background-color: #6b5bb1;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.control-btn:hover {
+    transform: scale(1.05);
+}
+
+.control-btn:active {
+    transform: scale(0.95);
+}
+
+.control-btn.pause {
+    background-color: #e67e22;
+}
+
+.control-btn.stop {
+    background-color: #e74c3c;
+}
+
+.control-btn.continue {
+    background-color: #2ecc71;
+    margin-left: 10px;
+}
+
+.control-btn:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.control-btn img {
+    height: 30px;
+    width: auto;
+}
+
+/* Game Board */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-gap: 20px;
+    justify-content: center;
+}
+
+.hole {
+    width: 140px;
+    height: 140px;
+    position: relative;
+    background: url('hole.png') no-repeat center center;
+    background-size: contain;
+    overflow: hidden;
+}
+
+.mole {
+    position: absolute;
+    bottom: -100%;
+    left: 51%;
+    transform: translateX(-50%);
+    transition: bottom 0.3s;
+    width: 125px;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    background: url('happy.png') no-repeat center center;
+    background-size: contain;
+    pointer-events: none;
+}
+
+.mole.show {
+    bottom: -20px;
+}
+
+.hole.active .mole {
+    bottom: 44px;
+}
+
+/* Mole text background */
+.mole span {
+    background-color: rgba(0, 0, 0, 0.5); /* Background color behind text */
+    padding: 2px 8px;
+    border-radius: 5px;
+}
+
+/* Pow Image */
+#pow {
+  position: absolute;
+  width: 90px;
+  height: auto;
+  z-index: 999;
+  pointer-events: none;
+}
+
+
+
+/* Pause Screen */
+.pause-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    z-index: 1001;
+}
+
+.pause-screen .pause-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+}
+
+.pause-screen.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Level Up Screen */
+.level-up {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-size: 48px;
+    z-index: 1001;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+.level-up.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.level-up-btn {
+    font-family: "Kodchasan";
+    margin-top: 20px;
+    padding: 10px 30px;
+    background-color: #6b5bb1;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.level-up-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Game Over */
+.game-over {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-size: 48px;
+    z-index: 1001;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+.game-over.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.play-again-btn {
+    font-family: "Kodchasan";
+    margin-top: 20px;
+    padding: 10px 30px;
+    background-color: #6b5bb1;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.play-again-btn:hover {
+    transform: scale(1.1);
+}

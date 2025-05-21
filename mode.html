@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Whack A Meow!</title>
+  <link rel="stylesheet" href="mode.css">
+  <link rel="icon" href="logoOne.png">
+</head>
+<body>
+   <!-- Main Game UI -->
+  <div id="gameContainer">
+    <!-- Header -->
+    <div class="header">
+      <img src="logoOne.png" alt="Whack A Meow" class="game-logo">
+    </div>
+
+    <!-- Game Info -->
+    <div class="game-info">
+      <div class="score">Score: <span id="score">0</span></div>
+      <div class="level">Level: <span id="levelDisplay">Easy</span></div>
+      <div class="timer">Time: <span id="timer">30</span>s</div>
+    </div>
+
+    <!-- Typed Display -->
+    <div class="typed-display">You typed: <span id="typedDisplay">...</span></div>
+
+    <!-- Game Controls -->
+    <div class="game-controls">
+      <button class="control-btn pause" id="pauseBtn">
+        <img src="pause.png" alt="Pause Button">
+      </button>
+      <button class="control-btn stop" id="stopBtn">
+        <img src="reset.png" alt="Stop Button">
+      </button>
+    </div>
+
+    <!-- Game Board -->
+    <div class="board">
+      <div class="hole"><div class="mole"></div></div>
+      <div class="hole"><div class="mole"></div></div>
+      <div class="hole"><div class="mole"></div></div>
+      <div class="hole"><div class="mole"></div></div>
+      <div class="hole"><div class="mole"></div></div>
+      <div class="hole"><div class="mole"></div></div>
+      <div class="hole"><div class="mole"></div></div>
+      <div class="hole"><div class="mole"></div></div>
+      <div class="hole"><div class="mole"></div></div>
+    </div>
+  </div>
+
+  <!-- Level Up Screen -->
+    <div class="level-up" id="levelUpScreen">
+        <div>Level <span id="newLevel">2</span>!</div>
+        <button class="level-up-btn" id="nextLevelBtn">Next Level</button>
+    </div>
+
+  <!-- Game Over Screen -->
+  <div class="game-over" id="gameOverScreen">
+    <div>Final Score: <span id="finalScore">0</span></div>
+    <button class="play-again-btn" id="playAgainBtn">Play Again</button>
+  </div>
+
+  <!-- Pause Screen -->
+  <div class="pause-screen" id="pauseScreen">
+    <div class="pause-content">
+      <span>Paused</span>
+      <button class="control-btn continue" id="continueBtn">
+        <img src="play.png" alt="Continue">
+      </button>
+    </div>
+  </div>
+
+  <!-- Pow -->
+  <img id="pow" src="ouch.png" style="display: none;" />
+  
+  <!-- Background Music -->
+  <audio id="bgMusic" src="bg-music.mp3" preload="auto" loop autoplay hidden></audio>
+
+  <!-- Add sound element (can be hidden) -->
+  <audio id="whackSound" src="meow1.mp3" preload="auto" style="display: none;"></audio>
+
+  <script src="mode.js"></script>
+</body>
+</html>

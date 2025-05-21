@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="logoOne.png">
+    <title>Create Account</title>
+</head>
+<body>
+    <div class="header">
+      <img src="logoOne.png" alt="Whack A Meow" class="game-logo">
+    </div>
+    <form>
+    <h1>If you have an account already, type your information and just click the Login button. If not please click the Sign Up button. You can also use your Google Account.</h1>
+
+    <input type="text" id="username" placeholder="Enter Your Username" required />
+    <input type="email" id="email" placeholder="Enter Your Email" required />
+    <input type="password" id="password" placeholder="Enter Your Password" required />
+    <button type="button" id="login">Login</button>
+    <input type="submit" id="submit" value="Create Account" />
+    <button type="button" id="google-signin">Sign up with Google</button>
+</form>
+
+<script> src= "https://createaccount-b8cbe-default-rtdb.asia-southeast1.firebasedatabase.app/"</script>
+
+    <script type="module" src="create-account.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+/* Font */
+@font-face {
+    font-family: "Kodchasan";
+    src: url("Kodchasan-Bold.ttf");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Kodchasan";
+    background-image: url("bg 4.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+
+/* Logo */
+.logo {
+    position: absolute;
+    width: 2%;
+    max-width: 10px;
+    text-align: center;
+}
+
+.game-logo {
+    width: 2%;
+    max-width: 10px;
+    height: auto;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Play Button */
+.play-button {
+    font-family: "Kodchasan";
+    display: flex;
+    justify-content: center;
+    margin-left: 40px;
+    margin-top:  0px;
+    padding: 15px 40px;
+    background-color: #6b5bb1;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 5px 0 #4a3d8c;
+}
+
+.play-button:hover {
+    transform: translateY(2px);
+    box-shadow: 0 3px 0 #4a3d8c;
+}
+
+.play-button:active {
+    color: white;
+    transform: translateY(5px);
+    box-shadow: none;
+}
+
+.play-button a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Mode Button */
+.mode-button {
+    font-family: "Kodchasan";
+    display: flex;
+    justify-content: center;
+    margin-left: 50px;
+    margin-top:  0px;
+    padding: 15px 40px;
+    background-color: #6b5bb1;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 5px 0 #4a3d8c;
+}
+.mode-button:hover {
+    transform: translateY(2px);
+    box-shadow: 0 3px 0 #4a3d8c;
+}
+.mode-button:active {
+    color: white;
+    transform: translateY(5px);
+    box-shadow: none;
+}
+.mode-button a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.leaderboard-screen {
+  display: none;
+  background: #fff;
+  padding: 20px;
+  border: 2px solid #000;
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+

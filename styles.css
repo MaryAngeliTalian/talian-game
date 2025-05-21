@@ -1,0 +1,105 @@
+@font-face {
+  font-family: "Kodchasan";
+  src: url("Kodchasan-Bold.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Kodchasan", sans-serif;
+  background-image: url("bg 4.png");
+  background-size: cover;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* --- Form Container --- */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #c69df1;
+  padding: 40px 30px;
+  border-radius: 25px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  gap: 15px;
+}
+
+/* --- Input Fields --- */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 15px;
+  width: 250px;
+  outline: none;
+}
+
+/* --- Login Button --- */
+#login {
+  padding: 14px 30px;
+  background-color: #7e62bd;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 0 #5a4794;
+}
+
+#login:hover {
+  background-color: #9779dc;
+  transform: translateY(-2px);
+}
+
+/* --- Sign in Button --- */
+#submit {
+  padding: 14px 30px;
+  background-color: #7e62bd;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 0 #5a4794;
+}
+
+#submit:hover {
+  background-color: #9779dc;
+  transform: translateY(-2px);
+}
+
+/* --- Google Sign-In Button --- */
+#google-signin {
+  margin-top: 20px;
+  padding: 14px 30px;
+  background-color: #ffffff;
+  color: #6a4fb3;
+  font-size: 16px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 0 #b2a0e0;
+}
+
+#google-signin:hover {
+  background-color: #eee6ff;
+  transform: translateY(-2px);
+}
